@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portal do Aluno</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="assets/unicampus.png" class="logo" width="380" alt="Logo UniCampus">
+
+        <nav class="cards-topo">
+            <div class="card-topo" onclick="abrirLogin()">
+                <span>Perfil</span>
+            </div>
+            <div class="card-topo" onclick="abrirCarrinho()">
+                <span>Carrinho <span id="contadorCarrinho" class="contador-badge">0</span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner do curso -->
+
+    <div class="banner-card">
+        <div class="banner-content">
+            <h1>ANÁLISE DE SISTEMAS</h1>
+            <p>Formando profissionais capacitados para criar, desenvolver e inovar soluções tecnológicas.</p>
+        </div>
+    </div>
+
+    <!-- Card do Curso -->
+
+    <section id="cursos">
+
+        <div class="card-cursos" onclick="abrirModal('cursosArray')">
+            <span class="cursos-tag">ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</span>
+            <h2>Cursos</h2>
+            <p>Cursos de Análise e Desenvolvimento de Sistemas.</p>
+        </div>
+    </section>
+
+    <!-- Modal de Cursos -->
+    <div id="overlay-cursosArray" class="overlay-modal" onclick="fecharModal('cursosArray')">
+        <div class="modal-cursos" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Cursos Disponíveis</h2>
+                <span class="fechar-modal" onclick="fecharModal('cursosArray')">✖</span>
+            </div>
+            <div id="listaCursos" class="lista-cursos"></div>
+        </div>
+    </div>
+
+    <!-- Alerta de sucesso -->
+    <div id="alertaSucesso" class="alerta-sucesso">✓ Curso adicionado ao carrinho!</div>
+
+    <!-- Contador carrinho no header -->
+
+    <!-- login -->
+
+    <div id="loginCard" class="login-card">
+        <div class="login-conteudo">
+            <span class="fecharLogin" onclick="fecharLogin()">✖</span>
+            <h2>Login do Aluno</h2>
+            <input type="text" placeholder="ID do Aluno" id="alunoId">
+            <input type="password" placeholder="Senha" id="alunoSenha">
+            <button onclick="fazerLogin()">Entrar</button>
+        </div>
+    </div>
+
+    <!-- carrinho -->
+    <div id="overlayCarrinho" class="overlay" onclick="fecharCarrinho()"></div>
+
+    <div id="carrinhoLateral" class="carrinho-lateral">
+        <div class="carrinho-header">
+            <h2>Cursos</h2>
+        </div>
+        <div id="listaCarrinho" class="carrinho-conteudo"></div>
+        <div class="carrinho-footer">
+            <p id="totalCarrinho">Total: R$ 0 </p>
+            <button onclick="finalizarCompra()">Finalizar Matrícula</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

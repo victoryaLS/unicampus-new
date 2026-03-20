@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #b4c8d8, #26658c);
+    padding: 20px;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-top: -25px;
+}
+
+.cards-topo {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.card-topo {
+    width: 125px;
+    height: 50px;
+    background-color: #1a4e9b54;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(195, 222, 248);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-topo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(30, 58, 138, 0.35);
+}
+
+.banner-card {
+    width: 900px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    margin-top: 20px;
+    transition: transform 0.5s;
+}
+
+.banner-card:hover {
+    transform: translateY(-5px);
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#cursos {
+    display: grid;
+    gap: 20px;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.card-cursos {
+    background: white;
+    border-radius: 15px;
+    padding: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.432);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card-cursos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.534);
+}
+
+.cursos-tag {
+    display: block;
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.card-cursos h2 {
+    margin-bottom: 15px;
+    color: #093475;
+    font-size: 30px;
+}
+
+.card-cursos p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+button {
+    background-color: #26658cbd;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.35);
+}
+
+.login-card {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    text-align: center;
+}
+
+.login-conteudo {
+    background: white;
+    padding: 60px;
+    border-radius: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-conteudo input {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.login-conteudo button {
+    background: #1b3270d7;
+    padding: 20px;
+}
+
+.fecharLogin {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 30px;
+    margin-top: -40px;
+    padding: -45px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 998;
+}
+
+.overlay.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrinho-lateral {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.carrinho-lateral.ativo {
+    right: 0;
+}
+
+.carrinho-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.carrinho-conteudo {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.item-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-carrinho button {
+    background: #1e3a8a;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.carrinho-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+#totalCarrinho {
+    padding: 10px;
+}
+
+.carrinho-footer button {
+    width: 100%;
+    padding: 15px;
+    background: #1e3a8a;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-box h2 {
+    color: #093475;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.modal-box p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.modal-box ul {
+    color: #555;
+    padding-left: 20px;
+}
+
+.modal-box ul li {
+    margin-bottom: 5px;
+}
+
+.modal-box hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: background 0.2s, color 0.2s;
+}
+
+.modal-fechar:hover {
+    background: #26658c;
+    color: white;
+}
+/* === Modal de Cursos === */
+.overlay-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-cursos {
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #1a237e;
+    color: #fff;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.fechar-modal {
+    cursor: pointer;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.fechar-modal:hover {
+    opacity: 1;
+}
+
+.lista-cursos {
+    overflow-y: auto;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-curso-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    transition: box-shadow 0.2s;
+}
+
+.card-curso-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.curso-info {
+    flex: 1;
+}
+
+.curso-info h3 {
+    margin: 0 0 6px 0;
+    color: #1a237e;
+    font-size: 1.05rem;
+}
+
+.curso-descricao {
+    margin: 0 0 10px 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.curso-detalhes {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.curso-detalhes span {
+    font-size: 0.82rem;
+    color: #666;
+    background: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.curso-conteudo {
+    margin: 0;
+    font-size: 0.82rem;
+    color: #666;
+}
+
+.btn-adicionar {
+    white-space: nowrap;
+    padding: 8px 16px;
+    background: #1a237e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    transition: background 0.2s;
+    align-self: center;
+}
+
+.btn-adicionar:hover {
+    background: #283593;
+}
+
+.btn-adicionar.adicionado {
+    background: #4caf50;
+    cursor: default;
+}
+
+/* Alerta de sucesso */
+.alerta-sucesso {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: #4caf50;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    z-index: 2000;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.alerta-sucesso.ativo {
+    transform: translateX(-50%) translateY(0);
+}

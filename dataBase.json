@@ -1,0 +1,34 @@
+[
+  {
+    "Curso": "Estruturas de Dados",
+    "Descriçao": "Aprenda como organizar e manipular dados de forma eficiente em memória usando listas, filas, pilhas, árvores e grafos.",
+    "Duração": "80 Horas",
+    "Nível": "Intermediário",
+    "Professor": "Roger Miller",
+    "Conteúdo": "Arrays e listas encadeadas, Pilhas e filas, Árvores binárias, Tabelas hash, Grafos e algoritmos de busca "
+  },
+  {
+    "Curso": "Modelagem de Sistemas",
+    "Descriçao": "Entenda como planejar e documentar sistemas de software antes de programar, usando UML e diagramas.",
+    "Duração": "60 Horas",
+    "Nível": "Iniciante",
+    "Professor": "Jackson",
+    "Conteúdo": " Introdução à UML, Diagrama de Casos de Uso, Diagrama de Classes,Diagrama de Sequência,Modelagem de banco de dados (MER)"
+  },
+  {
+    "Curso": "Paradigmas de Programação",
+    "Descriçao": "Explore diferentes formas de pensar e desenvolver software, do imperativo ao funcional e orientado a objetos.",
+    "Duração": "70 Horas",
+    "Nível": "Intermediário",
+    "Professor": "Marcos David",
+    "Conteúdo": " Paradigma Imperativo, Orientação a Objetos, Programação Funcional, Programação Reativa, Comparativo entre linguagens"
+  },
+  {
+    "Curso": "Banco de Dados",
+    "Descriçao": "Domine tecnologias e linguagens de armazenamento de dados, do SQL básico ao NoSQL avançado.",
+    "Duração": "90 Horas",
+    "Nível": "Iniciante ao Avançado",
+    "Professor": "Alex",
+    "Conteúdo": "Modelo Relacional e MER, SQL: DDL, DML e DQL, Normalização de dados, Stored Procedures e Triggers, Introdução ao NoSQL"
+  }
+]

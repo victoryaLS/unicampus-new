@@ -317,7 +317,7 @@ button:hover {
     background: #26658c;
     color: white;
 }
-/* === Modal de Cursos === */
+
 .overlay-modal {
     display: none;
     position: fixed;
@@ -402,7 +402,7 @@ button:hover {
 
 .curso-descricao {
     margin: 0 0 10px 0;
-    color: #555;
+    color: #2c2b2b;
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -416,56 +416,16 @@ button:hover {
 
 .curso-detalhes span {
     font-size: 0.82rem;
-    color: #666;
-    background: #f0f0f0;
+    background: #93c0e9;
     padding: 3px 8px;
     border-radius: 20px;
 }
 
 .curso-conteudo {
     margin: 0;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     color: #666;
 }
 
-.btn-adicionar {
-    white-space: nowrap;
-    padding: 8px 16px;
-    background: #1a237e;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.88rem;
-    transition: background 0.2s;
-    align-self: center;
-}
 
-.btn-adicionar:hover {
-    background: #283593;
-}
 
-.btn-adicionar.adicionado {
-    background: #4caf50;
-    cursor: default;
-}
-
-/* Alerta de sucesso */
-.alerta-sucesso {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: #4caf50;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    z-index: 2000;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.alerta-sucesso.ativo {
-    transform: translateX(-50%) translateY(0);
-}

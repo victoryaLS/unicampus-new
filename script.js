@@ -144,7 +144,7 @@ function mostrarAlerta() {
     setTimeout(() => alerta.classList.remove('ativo'), 2000);
 }
 
-// Cursos com o JSON
+// Cursos 
 
 const cursosArray = [
     {
